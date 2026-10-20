@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%; /* #FAF8F3 Warm Ivory */
+    --foreground: 217 33% 17%; /* #1F2937 Charcoal */
+  }
+
+  body {
+    background-color: #FAF8F3;
+    color: #1F2937;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), "Cormorant Garamond", Georgia, serif;
+    color: #0B1F3A;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5BA94;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08D57;
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid #B08D57;
+  outline-offset: 2px;
+}
