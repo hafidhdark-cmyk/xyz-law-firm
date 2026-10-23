@@ -56,16 +56,16 @@ export const CAREER_ROLES: JobRole[] = [
     location: "Lagos (Ikoyi)",
     type: "Full-Time",
     experience: "4 - 7 Years",
-    summary: "Drive legal tech adoption, matter management automation, client portal integrations, and appellate court e-filing systems.",
+    summary: "Drive legal tech adoption, automated matter operations, knowledge management frameworks, and practice workflows.",
     responsibilities: [
-      "Administer digital matter workspaces and manage client reporting dashboards.",
-      "Train practice groups on appellate e-filing standards and automated compliance protocols.",
+      "Administer digital matter workspaces and manage client reporting tools.",
+      "Train practice groups on modern legal tech standards and automated compliance protocols.",
       "Liaise with external tech vendors and firm partners to streamline knowledge management."
     ],
     qualifications: [
       "Degree in Law, Information Management, or related field.",
       "Experience deploying practice management or enterprise legal workflow tools.",
-      "Meticulous attention to detail and proficiency in data-driven operational reporting."
+      "Meticulous attention to detail and proficiency in operational reporting."
     ]
   }
 ];

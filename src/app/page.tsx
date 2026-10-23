@@ -12,132 +12,138 @@ import {
   ChevronRight,
   Building2,
   Clock,
+  Award,
+  BookOpen,
+  CheckCircle2,
+  Landmark,
   Compass,
-  FileCheck2,
 } from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 bg-ivory-200">
         {/* HERO SECTION */}
-        <section className="relative overflow-hidden bg-navy-950 text-white pt-24 pb-28 lg:pt-32 lg:pb-36 border-b border-navy-800">
-          {/* Subtle architectural gradient background */}
-          <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#B08D57_1px,transparent_1px)] [background-size:24px_24px]" />
-          <div className="absolute -top-40 right-0 w-[550px] h-[550px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden bg-navy-950 text-white pt-24 pb-28 lg:pt-36 lg:pb-40 border-b border-navy-800">
+          {/* Subtle architectural hairline background */}
+          <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#B08D57_1px,transparent_1px)] [background-size:28px_28px]" />
+          <div className="absolute -top-40 right-0 w-[650px] h-[650px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-navy-800/40 rounded-full blur-2xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-8">
               {/* Pill badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-navy-900 border border-gold-500/30 text-gold-400 text-xs tracking-wider uppercase font-medium">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-navy-900 border border-gold-500/30 text-gold-400 text-xs tracking-wider uppercase font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-                <span>Commercial Law &amp; Dispute Resolution</span>
-                <span className="text-navy-400">•</span>
+                <span>Premier Commercial Counsel</span>
+                <span className="text-navy-700">•</span>
                 <span>Lagos • Abuja • Port Harcourt</span>
               </div>
 
-              {/* Tagline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-white leading-[1.15]">
-                Clarity in complexity. <br />
-                <span className="italic text-gold-300 font-serif">Decisive advocacy</span> when the stakes are highest.
-              </h1>
-
-              {/* Lead paragraph */}
-              <p className="text-lg sm:text-xl text-ivory-300 font-light leading-relaxed max-w-2xl">
-                XYZ Law Firm advises multinationals, institutional financiers, and emerging industry leaders navigating Nigeria’s evolving commercial, regulatory, and judicial landscape.
-              </p>
+              {/* Confident Headings */}
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-white leading-[1.12]">
+                  Clarity in complexity. <br />
+                  <span className="italic text-gold-300 font-serif">Decisive advocacy</span> for landmark matters.
+                </h1>
+                <p className="text-lg sm:text-xl text-ivory-300 font-light leading-relaxed max-w-2xl pt-2">
+                  XYZ Law Firm delivers counsel to blue-chip multinationals, sovereign institutions, and market pioneers navigating Nigeria’s evolving commercial, regulatory, and judicial landscape.
+                </p>
+              </div>
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <Link
                   href="/practice-areas"
-                  className="inline-flex justify-center items-center gap-2 px-6 py-3.5 text-sm uppercase tracking-wider font-semibold bg-gold-500 text-navy-950 hover:bg-gold-400 transition-all rounded-sm shadow-md"
+                  className="inline-flex justify-center items-center gap-2.5 px-7 py-4 text-xs uppercase tracking-wider font-semibold bg-gold-500 text-navy-950 hover:bg-gold-400 transition-all duration-200 rounded-sm shadow-md"
                 >
-                  <span>Explore Practice Areas</span>
+                  <span>Explore Practice Capabilities</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
                 <Link
-                  href="/portal"
-                  className="inline-flex justify-center items-center gap-2 px-6 py-3.5 text-sm uppercase tracking-wider font-semibold border border-ivory-400/40 text-ivory-200 hover:border-white hover:text-white hover:bg-white/5 transition-all rounded-sm"
+                  href="/contact"
+                  className="inline-flex justify-center items-center gap-2.5 px-7 py-4 text-xs uppercase tracking-wider font-semibold border border-ivory-400/30 text-ivory-200 hover:border-white hover:text-white hover:bg-white/5 transition-all duration-200 rounded-sm"
                 >
-                  <ShieldCheck className="w-4 h-4 text-gold-400" />
-                  <span>Access Client Portal</span>
+                  <span>Instruct Counsel</span>
                 </Link>
               </div>
             </div>
 
             {/* Understated capability stats banner */}
-            <div className="mt-20 pt-10 border-t border-navy-800/80 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="mt-24 pt-10 border-t border-navy-800/80 grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="space-y-1">
-                <p className="font-serif text-3xl font-normal text-gold-300">30+ Years</p>
-                <p className="text-xs uppercase tracking-wider text-ivory-400">Institutional Seniority</p>
+                <p className="font-serif text-3xl sm:text-4xl font-normal text-gold-300">30+ Years</p>
+                <p className="text-xs uppercase tracking-wider text-ivory-400 font-medium">Institutional Heritage</p>
               </div>
               <div className="space-y-1">
-                <p className="font-serif text-3xl font-normal text-gold-300">3 Divisions</p>
-                <p className="text-xs uppercase tracking-wider text-ivory-400">Lagos, Abuja, PH Offices</p>
+                <p className="font-serif text-3xl sm:text-4xl font-normal text-gold-300">3 Divisions</p>
+                <p className="text-xs uppercase tracking-wider text-ivory-400 font-medium">Lagos, Abuja, PH Offices</p>
               </div>
               <div className="space-y-1">
-                <p className="font-serif text-3xl font-normal text-gold-300">7 Core</p>
-                <p className="text-xs uppercase tracking-wider text-ivory-400">Specialised Practice Groups</p>
+                <p className="font-serif text-3xl sm:text-4xl font-normal text-gold-300">7 Core</p>
+                <p className="text-xs uppercase tracking-wider text-ivory-400 font-medium">Specialised Practice Groups</p>
               </div>
               <div className="space-y-1">
-                <p className="font-serif text-3xl font-normal text-gold-300">100%</p>
-                <p className="text-xs uppercase tracking-wider text-ivory-400">Electronic Filing Ready</p>
+                <p className="font-serif text-3xl sm:text-4xl font-normal text-gold-300">Top-Tier</p>
+                <p className="text-xs uppercase tracking-wider text-ivory-400 font-medium">Appellate Advocacy</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* PRACTICE AREAS ROW */}
-        <section className="py-24 bg-ivory-200">
+        {/* PRACTICE AREAS SECTION */}
+        <section className="py-24 sm:py-32 bg-ivory-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="max-w-xl space-y-3">
                 <div className="inline-flex items-center gap-2 text-gold-600 text-xs uppercase tracking-widest font-semibold">
-                  <span>Specialised Advisory</span>
+                  <span>Specialised Disciplines</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-serif text-navy-950 font-normal">
-                  Our Practice Areas
+                <h2 className="text-3xl sm:text-5xl font-serif text-navy-950 font-normal">
+                  Practice Areas
                 </h2>
-                <p className="text-charcoal-600 text-base leading-relaxed">
-                  Deep sector expertise blended with rigorous commercial acumen to support capital deployment, risk shielding, and regulatory compliance.
+                <p className="text-charcoal-600 text-base leading-relaxed font-light">
+                  Sector-specific acumen blended with rigorous commercial strategy to protect assets, close complex transactions, and resolve high-stakes disputes.
                 </p>
               </div>
               <Link
                 href="/practice-areas"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-navy-900 hover:text-gold-600 transition-colors group shrink-0"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-navy-950 hover:text-gold-700 transition-colors group shrink-0"
               >
-                <span>View All 7 Disciplines</span>
+                <span>View All 7 Practice Groups</span>
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 
             {/* Grid of practice cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {PRACTICE_AREAS.slice(0, 6).map((practice) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {PRACTICE_AREAS.map((practice) => (
                 <div
                   key={practice.id}
-                  className="bg-white p-8 rounded-sm border border-ivory-400 hover:border-gold-500/60 transition-all duration-300 hover:shadow-lg flex flex-col justify-between group"
+                  className="bg-white p-8 sm:p-10 rounded-sm border border-ivory-400 hover:border-gold-500/70 transition-all duration-300 hover:shadow-xl flex flex-col justify-between group relative"
                 >
+                  {/* Subtle top-right corner notch */}
+                  <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-transparent group-hover:border-gold-500 transition-colors pointer-events-none" />
+
                   <div className="space-y-4">
-                    <div className="w-9 h-9 rounded-sm bg-ivory-100 border border-ivory-300 flex items-center justify-center text-gold-600 group-hover:bg-navy-900 group-hover:text-gold-300 group-hover:border-navy-900 transition-colors">
+                    <div className="w-10 h-10 rounded-sm bg-ivory-100 border border-ivory-300 flex items-center justify-center text-gold-600 group-hover:bg-navy-950 group-hover:text-gold-300 group-hover:border-navy-950 transition-all duration-300">
                       <Briefcase className="w-4 h-4" />
                     </div>
-                    <h3 className="font-serif text-xl text-navy-950 font-medium group-hover:text-gold-600 transition-colors">
+                    <h3 className="font-serif text-2xl text-navy-950 font-normal group-hover:text-gold-700 transition-colors">
                       {practice.title}
                     </h3>
-                    <p className="text-sm text-charcoal-600 leading-relaxed">
+                    <p className="text-sm text-charcoal-600 leading-relaxed font-light">
                       {practice.shortDescription}
                     </p>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-ivory-300 flex items-center justify-between text-xs text-charcoal-500">
-                    <span className="font-medium text-navy-900/80">Lead: {practice.leadPartner}</span>
+                  <div className="pt-6 mt-8 border-t border-ivory-300 flex items-center justify-between text-xs text-charcoal-500">
+                    <span className="font-medium text-navy-950/80">Lead: {practice.leadPartner}</span>
                     <Link
                       href={`/practice-areas#${practice.slug}`}
-                      className="text-gold-600 hover:text-navy-900 font-semibold flex items-center gap-1 group-hover:underline"
+                      className="text-gold-700 hover:text-navy-950 font-semibold flex items-center gap-1 group-hover:underline"
                     >
                       <span>Explore</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -149,26 +155,93 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* INSTITUTIONAL PILLARS / WHY XYZ LAW FIRM */}
+        <section className="py-24 bg-navy-950 text-white border-y border-navy-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+              <span className="text-gold-400 text-xs uppercase tracking-widest font-semibold">
+                Firm Distinction
+              </span>
+              <h2 className="text-3xl sm:text-5xl font-serif text-white font-normal">
+                Why Institutional Leaders Choose XYZ
+              </h2>
+              <p className="text-ivory-300 text-sm leading-relaxed font-light">
+                We combine courtroom gravitas before the Supreme Court of Nigeria with sophisticated transactional execution across West Africa.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-navy-900/60 p-8 rounded-sm border border-navy-800 space-y-4 hover:border-gold-500/40 transition-colors">
+                <div className="w-10 h-10 rounded-sm bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                  <Scale className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif text-xl text-white font-normal">
+                  Appellate Mastery
+                </h3>
+                <p className="text-xs text-ivory-400 leading-relaxed font-light">
+                  Direct advocacy by Senior Advocates of Nigeria (SAN) with an established record before the Supreme Court, Court of Appeal, and major arbitral tribunals.
+                </p>
+              </div>
+
+              <div className="bg-navy-900/60 p-8 rounded-sm border border-navy-800 space-y-4 hover:border-gold-500/40 transition-colors">
+                <div className="w-10 h-10 rounded-sm bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                  <Landmark className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif text-xl text-white font-normal">
+                  Regulatory Fluency
+                </h3>
+                <p className="text-xs text-ivory-400 leading-relaxed font-light">
+                  Continuous engagement with key sovereign bodies including the CBN, NUPRC, NMDPRA, SEC, and the Nigeria Data Protection Commission (NDPC).
+                </p>
+              </div>
+
+              <div className="bg-navy-900/60 p-8 rounded-sm border border-navy-800 space-y-4 hover:border-gold-500/40 transition-colors">
+                <div className="w-10 h-10 rounded-sm bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                  <Compass className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif text-xl text-white font-normal">
+                  Pan-African Reach
+                </h3>
+                <p className="text-xs text-ivory-400 leading-relaxed font-light">
+                  Managing cross-border joint ventures, regional supply chains, and foreign direct investment across Nigeria and the wider ECOWAS trade corridor.
+                </p>
+              </div>
+
+              <div className="bg-navy-900/60 p-8 rounded-sm border border-navy-800 space-y-4 hover:border-gold-500/40 transition-colors">
+                <div className="w-10 h-10 rounded-sm bg-navy-950 border border-gold-500/30 flex items-center justify-center text-gold-400">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif text-xl text-white font-normal">
+                  Ethical Stewardship
+                </h3>
+                <p className="text-xs text-ivory-400 leading-relaxed font-light">
+                  Unbending adherence to professional conduct rules, strict advocate-client confidentiality, and rigorous corporate governance standards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FEATURED INSIGHTS SECTION */}
-        <section className="py-24 bg-white border-y border-ivory-400">
+        <section className="py-24 sm:py-32 bg-white border-b border-ivory-400">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="max-w-xl space-y-3">
                 <div className="inline-flex items-center gap-2 text-gold-600 text-xs uppercase tracking-widest font-semibold">
                   <span>Legal Intelligence</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-serif text-navy-950 font-normal">
-                  Latest Insights &amp; Regulatory Briefings
+                <h2 className="text-3xl sm:text-5xl font-serif text-navy-950 font-normal">
+                  Latest Insights &amp; Briefings
                 </h2>
-                <p className="text-charcoal-600 text-base leading-relaxed">
-                  Pragmatic analysis on statutory developments, court practice directions, and sovereign market shifts affecting Nigerian enterprise.
+                <p className="text-charcoal-600 text-base leading-relaxed font-light">
+                  Authoritative commentary on the Nigeria Data Protection Act, appellate court electronic filing practice directions, Petroleum Industry Act, and corporate governance.
                 </p>
               </div>
               <Link
                 href="/insights"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-navy-900 hover:text-gold-600 transition-colors group shrink-0"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-navy-950 hover:text-gold-700 transition-colors group shrink-0"
               >
-                <span>Read All Insights</span>
+                <span>Browse All Publications</span>
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -177,36 +250,36 @@ export default function HomePage() {
               {INSIGHTS_ARTICLES.slice(0, 3).map((article) => (
                 <article
                   key={article.slug}
-                  className="flex flex-col justify-between bg-ivory-100 p-7 rounded-sm border border-ivory-400 hover:border-gold-500/50 transition-all hover:shadow-md"
+                  className="flex flex-col justify-between bg-ivory-100 p-8 rounded-sm border border-ivory-400 hover:border-gold-500/60 transition-all hover:shadow-lg"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between text-xs text-charcoal-500">
                       <span className="px-2.5 py-1 bg-white border border-ivory-300 text-gold-700 font-semibold rounded-sm">
                         {article.category}
                       </span>
-                      <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1 font-mono text-[11px]">
                         <Clock className="w-3 h-3 text-charcoal-400" />
                         {article.readTime}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-lg text-navy-950 font-medium hover:text-gold-600 transition-colors leading-snug">
+                    <h3 className="font-serif text-xl text-navy-950 font-normal hover:text-gold-700 transition-colors leading-snug">
                       <Link href={`/insights/${article.slug}`}>{article.title}</Link>
                     </h3>
 
-                    <p className="text-xs text-charcoal-600 leading-relaxed line-clamp-3">
+                    <p className="text-xs text-charcoal-600 leading-relaxed font-light line-clamp-3">
                       {article.summary}
                     </p>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-ivory-300/80 flex items-center justify-between">
+                  <div className="pt-6 mt-6 border-t border-ivory-300 flex items-center justify-between">
                     <div className="text-xs">
                       <p className="font-semibold text-navy-950">{article.author.name}</p>
-                      <p className="text-charcoal-500 text-[11px]">{article.author.role}</p>
+                      <p className="text-charcoal-500 text-[11px] font-light">{article.author.role}</p>
                     </div>
                     <Link
                       href={`/insights/${article.slug}`}
-                      className="text-gold-600 hover:text-navy-900 text-xs font-semibold flex items-center gap-1"
+                      className="text-gold-700 hover:text-navy-950 text-xs font-semibold flex items-center gap-1"
                     >
                       <span>Read</span>
                       <ChevronRight className="w-3 h-3" />
@@ -218,53 +291,18 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CLIENT PORTAL & FILING TOOL TEASER */}
-        <section className="py-20 bg-navy-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-sm bg-gradient-to-r from-navy-950 to-navy-900 p-8 sm:p-12 border border-gold-500/30 flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="space-y-4 max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-gold-500/10 border border-gold-500/30 text-gold-300 text-xs font-semibold rounded-sm uppercase tracking-wider">
-                  <FileCheck2 className="w-3.5 h-3.5" />
-                  <span>Exclusive Technology Showcase</span>
-                </div>
-                <h3 className="font-serif text-2xl sm:text-3xl text-white">
-                  Nigerian Appellate Filing Assistant &amp; Real-Time Client Portal
-                </h3>
-                <p className="text-sm text-ivory-300 leading-relaxed">
-                  Experience our integrated software capabilities designed specifically for Nigerian corporate clients: automated court nomenclature formatting, 30-day pre-hearing upload countdowns, OCR checklist audits, and live matter tracking.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
-                <Link
-                  href="/portal/filing-assistant"
-                  className="px-6 py-3 text-xs uppercase tracking-wider font-semibold bg-gold-500 text-navy-950 hover:bg-gold-400 transition-colors text-center rounded-sm"
-                >
-                  Launch Filing Assistant
-                </Link>
-                <Link
-                  href="/portal"
-                  className="px-6 py-3 text-xs uppercase tracking-wider font-semibold border border-ivory-400 text-ivory-200 hover:bg-white/10 transition-colors text-center rounded-sm"
-                >
-                  Enter Client Portal
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* OFFICES SECTION */}
-        <section className="py-24 bg-ivory-200">
+        <section className="py-24 sm:py-32 bg-ivory-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
               <div className="inline-flex items-center gap-2 text-gold-600 text-xs uppercase tracking-widest font-semibold">
                 <span>Nationwide Presence</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif text-navy-950 font-normal">
+              <h2 className="text-3xl sm:text-5xl font-serif text-navy-950 font-normal">
                 Offices Across Nigeria
               </h2>
-              <p className="text-charcoal-600 text-base">
-                Strategically positioned across Nigeria’s key commercial, political, and energy hubs.
+              <p className="text-charcoal-600 text-base font-light">
+                Positioned in Nigeria’s commercial, federal capital, and energy centers for seamless in-person and tribunal liaison.
               </p>
             </div>
 
@@ -272,14 +310,14 @@ export default function HomePage() {
               {OFFICES.map((office) => (
                 <div
                   key={office.id}
-                  className="bg-white p-8 rounded-sm border border-ivory-400 hover:border-gold-500/50 transition-all hover:shadow-md space-y-5"
+                  className="bg-white p-8 sm:p-10 rounded-sm border border-ivory-400 hover:border-gold-500/60 transition-all hover:shadow-lg space-y-6"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-sm bg-ivory-100 border border-ivory-300 flex items-center justify-center text-navy-900">
+                    <div className="w-10 h-10 rounded-sm bg-ivory-100 border border-ivory-300 flex items-center justify-center text-navy-950">
                       <Building2 className="w-5 h-5 text-gold-600" />
                     </div>
                     {office.isHeadquarters && (
-                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-navy-900 text-gold-300 rounded-sm">
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-navy-950 text-gold-300 rounded-sm">
                         Headquarters
                       </span>
                     )}
@@ -294,10 +332,10 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <div className="space-y-2 text-sm text-charcoal-600 pt-3 border-t border-ivory-300">
+                  <div className="space-y-2.5 text-xs text-charcoal-600 pt-3 border-t border-ivory-300 font-light">
                     <p className="text-charcoal-800 font-medium">{office.address}</p>
                     <p className="text-xs text-charcoal-500">{office.postalCode}</p>
-                    <p className="text-xs font-semibold text-navy-900 pt-1">{office.phone}</p>
+                    <p className="text-xs font-semibold text-navy-950 pt-1">{office.phone}</p>
                     <p className="text-xs text-gold-700">{office.email}</p>
                     <p className="text-[11px] text-charcoal-400 pt-1">{office.workingHours}</p>
                   </div>
@@ -308,26 +346,26 @@ export default function HomePage() {
         </section>
 
         {/* CALM CALL TO ACTION */}
-        <section className="py-20 bg-ivory-100 border-t border-ivory-400">
+        <section className="py-24 bg-ivory-100 border-t border-ivory-400">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-serif text-navy-950">
+            <h2 className="text-3xl sm:text-5xl font-serif text-navy-950 font-normal">
               Confident counsel for consequential matters.
             </h2>
-            <p className="text-charcoal-600 text-base max-w-xl mx-auto leading-relaxed">
-              Whether structuring a cross-border acquisition, lodging an appellate brief, or ensuring strict statutory compliance, our partners are ready to assist.
+            <p className="text-charcoal-600 text-base max-w-xl mx-auto leading-relaxed font-light">
+              Whether structuring a cross-border acquisition, defending corporate rights before an appellate tribunal, or seeking statutory guidance, our practice heads are available for confidential consultations.
             </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 text-xs uppercase tracking-wider font-semibold bg-navy-900 text-white hover:bg-navy-800 transition-colors rounded-sm shadow-sm"
+                className="px-8 py-4 text-xs uppercase tracking-wider font-semibold bg-navy-950 text-white hover:bg-gold-500 hover:text-navy-950 transition-all rounded-sm shadow-sm"
               >
                 Schedule Confidential Consultation
               </Link>
               <Link
                 href="/people"
-                className="px-8 py-3.5 text-xs uppercase tracking-wider font-semibold border border-navy-900 text-navy-900 hover:bg-white transition-colors rounded-sm"
+                className="px-8 py-4 text-xs uppercase tracking-wider font-semibold border border-navy-950 text-navy-950 hover:bg-white transition-colors rounded-sm"
               >
-                Meet Our Partners
+                Meet Our Partners &amp; Counsel
               </Link>
             </div>
           </div>

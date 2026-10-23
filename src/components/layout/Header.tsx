@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Shield, ArrowUpRight, Scale } from "lucide-react";
+import { Menu, X, Scale, Phone, ArrowRight } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/practice-areas", label: "Practice Areas" },
@@ -18,47 +18,59 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-ivory-400/80 transition-all">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-ivory-400/80 transition-all shadow-xs">
       {/* Top micro-bar */}
-      <div className="bg-navy-950 text-ivory-300 text-xs py-1.5 px-4 sm:px-8 border-b border-navy-800 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Offices in Lagos, Abuja & Port Harcourt
-          </span>
-          <span className="hidden md:inline text-navy-400">|</span>
-          <span className="hidden md:inline text-ivory-400">
-            Recognised by leading commercial directories (sample)
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/portal"
-            className="flex items-center gap-1 text-gold-400 hover:text-gold-300 font-medium transition-colors"
-          >
-            <Shield className="w-3 h-3" />
-            <span>Client Portal</span>
-            <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.2 bg-gold-500/20 text-gold-300 rounded font-semibold ml-1">
-              Demo
+      <div className="bg-navy-950 text-ivory-300 text-xs py-2 px-4 sm:px-8 border-b border-navy-900/80">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span className="font-medium text-ivory-200">Lagos • Abuja • Port Harcourt</span>
             </span>
-          </Link>
+            <span className="hidden md:inline text-navy-700">|</span>
+            <span className="hidden md:inline text-ivory-400">
+              Commercial Barristers &amp; Solicitors
+            </span>
+            <span className="hidden lg:inline text-navy-700">|</span>
+            <span className="hidden lg:inline text-gold-400/90 italic">
+              Recognised by leading legal directories (sample)
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 text-[11px]">
+            <a
+              href="tel:+23412954400"
+              className="hidden sm:flex items-center gap-1.5 text-ivory-300 hover:text-gold-400 transition-colors"
+            >
+              <Phone className="w-3 h-3 text-gold-400" />
+              <span>+234 (1) 295 4400</span>
+            </a>
+            <span className="hidden sm:inline text-navy-700">|</span>
+            <Link
+              href="/contact"
+              className="text-gold-400 hover:text-gold-300 font-semibold transition-colors uppercase tracking-wider text-[10px]"
+            >
+              Direct Counsel Inquiry →
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-22">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-sm bg-navy-900 border border-gold-500/40 flex items-center justify-center text-gold-400 group-hover:border-gold-400 transition-colors shadow-sm">
-              <Scale className="w-5 h-5 text-gold-400" />
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="w-11 h-11 rounded-sm bg-navy-950 border border-gold-500/50 flex items-center justify-center text-gold-400 group-hover:border-gold-400 transition-all duration-300 shadow-sm relative">
+              <Scale className="w-5 h-5 text-gold-400 transition-transform duration-300 group-hover:scale-105" />
+              <div className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-gold-400" />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-navy-900 group-hover:text-gold-600 transition-colors">
+              <span className="font-serif text-2xl font-bold tracking-tight text-navy-950 group-hover:text-gold-700 transition-colors">
                 XYZ LAW FIRM
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-charcoal-500 font-medium -mt-1">
-                Barristers &amp; Solicitors • Lagos
+              <span className="text-[10px] tracking-[0.22em] uppercase text-charcoal-500 font-medium -mt-0.5">
+                Barristers &amp; Solicitors • Est. 1996
               </span>
             </div>
           </Link>
@@ -71,32 +83,31 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-sm font-medium transition-colors rounded-sm ${
+                  className={`px-4 py-2.5 text-sm font-medium transition-all rounded-sm relative group ${
                     isActive
-                      ? "text-navy-900 font-semibold bg-gold-50/80 border-b-2 border-gold-500"
-                      : "text-charcoal-600 hover:text-navy-900 hover:bg-ivory-100"
+                      ? "text-navy-950 font-bold"
+                      : "text-charcoal-700 hover:text-navy-950 hover:bg-ivory-100"
                   }`}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {isActive ? (
+                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gold-500 rounded-full" />
+                  ) : (
+                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gold-500/0 group-hover:bg-gold-500/40 rounded-full transition-all" />
+                  )}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right Action: Contact Button & Client Portal */}
+          {/* Right Action: Consult Counsel */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="px-4 py-2 text-xs uppercase tracking-wider font-semibold text-navy-900 border border-navy-900/30 hover:border-navy-900 hover:bg-navy-900 hover:text-white transition-all rounded-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-xs uppercase tracking-wider font-semibold text-navy-950 border border-navy-950/40 hover:border-navy-950 hover:bg-navy-950 hover:text-white transition-all duration-200 rounded-sm shadow-xs group"
             >
-              Consult Counsel
-            </Link>
-            <Link
-              href="/portal"
-              className="flex items-center gap-1.5 px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-navy-900 text-white hover:bg-navy-800 transition-all rounded-sm shadow-sm"
-            >
-              <span>Client Portal</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-gold-400" />
+              <span>Consult Counsel</span>
+              <ArrowRight className="w-3.5 h-3.5 text-gold-600 group-hover:text-gold-400 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
 
@@ -104,7 +115,7 @@ export function Header() {
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-navy-900 hover:text-gold-600 transition-colors focus:outline-none"
+              className="p-2 text-navy-950 hover:text-gold-600 transition-colors focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -115,7 +126,7 @@ export function Header() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-ivory-400 bg-white px-4 pt-3 pb-6 shadow-xl space-y-2">
+        <div className="lg:hidden border-t border-ivory-400 bg-white px-4 pt-3 pb-6 shadow-xl space-y-2 animate-in fade-in duration-200">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
@@ -123,9 +134,9 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3 py-2.5 text-base font-medium rounded-sm ${
+                className={`block px-3.5 py-2.5 text-base font-medium rounded-sm ${
                   isActive
-                    ? "bg-gold-50 text-navy-950 font-bold border-l-4 border-gold-500"
+                    ? "bg-gold-50/80 text-navy-950 font-bold border-l-4 border-gold-500"
                     : "text-charcoal-700 hover:bg-ivory-100"
                 }`}
               >
@@ -135,24 +146,11 @@ export function Header() {
           })}
           <div className="pt-4 border-t border-ivory-300 space-y-2">
             <Link
-              href="/portal"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-3 py-2.5 text-sm font-semibold bg-navy-900 text-white rounded-sm"
-            >
-              <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-gold-400" />
-                Access Client Portal
-              </span>
-              <span className="text-[10px] uppercase bg-gold-500/20 text-gold-300 px-2 py-0.5 rounded">
-                Demo
-              </span>
-            </Link>
-            <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-center px-3 py-2.5 text-sm font-semibold border border-navy-900 text-navy-900 rounded-sm"
+              className="block text-center px-4 py-3 text-xs uppercase tracking-wider font-semibold bg-navy-950 text-white rounded-sm hover:bg-navy-900 transition-colors"
             >
-              Book Confidential Consultation
+              Consult Counsel Directly
             </Link>
           </div>
         </div>

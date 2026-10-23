@@ -178,7 +178,7 @@ export default function CareersPage() {
                     Mock Application Received
                   </h4>
                   <p className="text-xs text-emerald-800 leading-relaxed max-w-md mx-auto">
-                    This is an interactive demonstration. In production, this trigger connects directly to the firm&apos;s HR portal or applicant tracking system.
+                    This is an interactive demonstration. In production, this submission is routed directly to the firm&apos;s talent management committee.
                   </p>
                   <button
                     onClick={() => {
